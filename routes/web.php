@@ -17,21 +17,61 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('index');
+    return redirect('/about');
 });
 
 Route::get('/mahasiswa', function() {
     $mahasiswas = [
-        'Mahasiswa 1',
-        'Mahasiswa 2',
-        'Mahasiswa 3',
-        'Mahasiswa 4',
-        'Mahasiswa 5',
-        'Mahasiswa 6',
-        'Mahasiswa 7',
-        'Mahasiswa 8',
-        'Mahasiswa 9',
-        'Mahasiswa 10'
+        [
+            'nama' => 'Radi Alpiyanto',
+            'npm' => '2110631170079',
+            'kelas' => '4F TI',
+        ],
+        [
+            'nama' => 'Hadi Royan Firdaus',
+            'npm' => '2110631170079',
+            'kelas' => '4F TI',
+        ],
+        [
+            'nama' => 'Daffa Farelian',
+            'npm' => '2110631170079',
+            'kelas' => '4F TI',
+        ],
+        [
+            'nama' => 'Tegar Pamungkas',
+            'npm' => '2110631170079',
+            'kelas' => '4F TI',
+        ],
+        [
+            'nama' => 'Fitra Fajar',
+            'npm' => '2110631170079',
+            'kelas' => '4F TI',
+        ],
+        [
+            'nama' => 'Bagas Aqmal',
+            'npm' => '2110631170079',
+            'kelas' => '4F TI',
+        ],
+        [
+            'nama' => 'Dimas Aryansyah',
+            'npm' => '2110631170079',
+            'kelas' => '4F TI',
+        ],
+        [
+            'nama' => 'Dimas Farid',
+            'npm' => '2110631170079',
+            'kelas' => '4F TI',
+        ],
+        [
+            'nama' => 'Silviana Angelicca',
+            'npm' => '2110631170079',
+            'kelas' => '4F TI',
+        ],
+        [
+            'nama' => 'Risa Nur Fitriyani',
+            'npm' => '2110631170079',
+            'kelas' => '4F TI',
+        ],
     ];
     return view('layouts.mahasiswa', compact('mahasiswas'));
 });
@@ -45,7 +85,7 @@ Route::get('/mata-kuliah', function() {
         'Keamanan Sistem',
         'Jaringan Komputer',
         'Pemgrograman Berbasis Web',
-        'Statistika (matkul aneh)',
+        'Statistika dan Probabilitas',
         'Kecerdasan Buatan',
         'Agama Islam'
     ];
@@ -65,4 +105,8 @@ Route::get('/dosen', function() {
         'Dosen 10'
     ];
     return view('layouts.dosen', compact('dosens'));
+});
+
+Route::get('/about', function() {
+    return view('layouts.about');
 });

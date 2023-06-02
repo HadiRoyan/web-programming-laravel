@@ -4,14 +4,14 @@
 
 @section('content')
 
-    <div class="container mt-5">
+    <div class="container mt-5 mb-5">
         <div class="row justify-content-center">
             <div class="col-md-6">
                 <h4 class="fw-bold text-center">Data Dosen</h4>
-                <table class="table table-bordered">
+                <table class="table table-bordered table-striped mt-4">
                     <thead>
                         <tr>
-                            <th scope="col">#</th>
+                            <th scope="col">No</th>
                             <th scope="col">Nama</th>
                         </tr>
                     </thead>
